@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/contactImageCardView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="48dp"
+
+            app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
+            app:layout_constraintStart_toEndOf="@+id/personImageView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/contact_picture" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/personImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/person"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contactImageCardView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/firstNameTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:hint="First name"
+            app:layout_constraintBottom_toBottomOf="@+id/personImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/personImageView"
+            app:layout_constraintTop_toTopOf="@+id/personImageView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lastNameTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Last name"
+            app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
+            app:layout_constraintStart_toStartOf="@+id/firstNameTL"
+            app:layout_constraintTop_toBottomOf="@+id/firstNameTL">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/enterpriseImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/domain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lastNameTL" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/companyNameTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Company"
+            app:layout_constraintBottom_toBottomOf="@+id/enterpriseImageView"
+            app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
+            app:layout_constraintStart_toStartOf="@+id/firstNameTL"
+            app:layout_constraintTop_toTopOf="@+id/enterpriseImageView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/phoneImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/call"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyNameTL" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Mobile"
+            app:layout_constraintBottom_toBottomOf="@+id/phoneImageView"
+            app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
+            app:layout_constraintStart_toStartOf="@+id/firstNameTL"
+            app:layout_constraintTop_toTopOf="@+id/phoneImageView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/landlineTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Landline"
+            app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
+            app:layout_constraintStart_toStartOf="@+id/firstNameTL"
+            app:layout_constraintTop_toBottomOf="@+id/phoneTL">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/mailImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/mail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/landlineTL" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mailTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            app:layout_constraintBottom_toBottomOf="@+id/mailImageView"
+            app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
+            app:layout_constraintStart_toStartOf="@+id/firstNameTL"
+            app:layout_constraintTop_toTopOf="@+id/mailImageView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/adressImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mailTL" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addressTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            app:layout_constraintBottom_toBottomOf="@+id/adressImageView"
+            app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
+            app:layout_constraintStart_toStartOf="@+id/firstNameTL"
+            app:layout_constraintTop_toTopOf="@+id/adressImageView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"  />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/zipCodeTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Zip Code"
+            app:layout_constraintEnd_toEndOf="@+id/addressTL"
+            app:layout_constraintStart_toStartOf="@+id/firstNameTL"
+            app:layout_constraintTop_toBottomOf="@+id/addressTL">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/descriptionImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/zipCodeTL" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/descriptionTL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Notes"
+            app:layout_constraintBottom_toBottomOf="@+id/descriptionImageView"
+            app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
+            app:layout_constraintStart_toStartOf="@+id/firstNameTL"
+            app:layout_constraintTop_toTopOf="@+id/descriptionImageView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
