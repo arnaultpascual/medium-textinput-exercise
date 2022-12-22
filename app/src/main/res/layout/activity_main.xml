@@ -46,6 +46,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="32dp"
             android:hint="First name"
+            android:enabled="false"
             app:layout_constraintBottom_toBottomOf="@+id/personImageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/personImageView"
@@ -64,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="Last name"
+            android:enabled="false"
             app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
             app:layout_constraintStart_toStartOf="@+id/firstNameTL"
             app:layout_constraintTop_toBottomOf="@+id/firstNameTL">
@@ -90,6 +92,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Company"
+            android:enabled="false"
             app:layout_constraintBottom_toBottomOf="@+id/enterpriseImageView"
             app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
             app:layout_constraintStart_toStartOf="@+id/firstNameTL"
@@ -117,6 +120,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Mobile"
+            android:enabled="false"
             app:layout_constraintBottom_toBottomOf="@+id/phoneImageView"
             app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
             app:layout_constraintStart_toStartOf="@+id/firstNameTL"
@@ -134,6 +138,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="Landline"
+            android:enabled="false"
             app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
             app:layout_constraintStart_toStartOf="@+id/firstNameTL"
             app:layout_constraintTop_toBottomOf="@+id/phoneTL">
@@ -160,6 +165,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Email Address"
+            android:enabled="false"
             app:layout_constraintBottom_toBottomOf="@+id/mailImageView"
             app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
             app:layout_constraintStart_toStartOf="@+id/firstNameTL"
@@ -187,6 +193,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Address"
+            android:enabled="false"
             app:layout_constraintBottom_toBottomOf="@+id/adressImageView"
             app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
             app:layout_constraintStart_toStartOf="@+id/firstNameTL"
@@ -205,6 +212,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="Zip Code"
+            android:enabled="false"
             app:layout_constraintEnd_toEndOf="@+id/addressTL"
             app:layout_constraintStart_toStartOf="@+id/firstNameTL"
             app:layout_constraintTop_toBottomOf="@+id/addressTL">
@@ -231,6 +239,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Notes"
+            android:enabled="false"
             app:layout_constraintBottom_toBottomOf="@+id/descriptionImageView"
             app:layout_constraintEnd_toEndOf="@+id/firstNameTL"
             app:layout_constraintStart_toStartOf="@+id/firstNameTL"
@@ -241,6 +250,34 @@
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/cancelEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/md_theme_dark_error"
+            android:text="Cancel"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionImageView" />
+
+        <Button
+            android:id="@+id/confirmEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="Validate"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionImageView" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
